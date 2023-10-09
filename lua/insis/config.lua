@@ -48,13 +48,15 @@ local UserConfig = {
 
   ---@class Commonkeys
   keys = {
-    leader_key = " ",
+    leader_key = ",",
     -- quick save / quite
     n_save = "<leader>w", -- :w
-    n_force_quit = "<leader>q", -- :qa!
+    n_quit = "qq", -- :q
+    n_force_quit = "Q", -- :q!
+    n_quit_all = "qa", -- :q!
     -- quick move
-    n_v_5j = "<C-j>",
-    n_v_5k = "<C-k>",
+    -- n_v_5j = "<C-j>",
+    -- n_v_5k = "<C-k>",
     n_v_10k = "<C-u>",
     n_v_10j = "<C-d>",
     fold = {
@@ -139,7 +141,7 @@ local UserConfig = {
   nvimTree = {
     enable = true,
     keys = {
-      toggle = { "<A-m>", "<leader>m" },
+      toggle = { "<A-t>", "<leader>t" },
       refresh = "R",
       -- open / close --
       edit = { "o", "<2-LeftMouse>" },
@@ -418,7 +420,7 @@ local UserConfig = {
 
   ---@class PythonConfig
   python = {
-    enable = false,
+    enable = true,
     -- can be pylsp or pyright
     lsp = "pylsp",
     -- pip install black
@@ -438,7 +440,7 @@ local UserConfig = {
 
   ---@class JsonConfig
   json = {
-    enable = false,
+    enable = true,
     lsp = "jsonls",
     -- npm install -g fixjson
     ---@type "fixjson" | "prettier"

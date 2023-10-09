@@ -21,7 +21,9 @@ vim.g.maplocalleader = keys.leader_key
 
 -- save && quit
 keymap("n", keys.n_save, "<CMD>w<CR>")
-keymap("n", keys.n_force_quit, "<CMD>qa!<CR>")
+keymap("n", keys.n_quit, "<CMD>q<CR>")
+keymap("n", keys.n_quit_all, "<CMD>qa<CR>")
+keymap("n", keys.n_force_quit, "<CMD>q!<CR>")
 -- keymap("n", keys.n_save_quit, "<CMD>wq<CR>")
 -- keymap("n", keys.n_save_all, "<CMD>wa<CR>")
 -- keymap("n", keys.n_save_all_quit, "<CMD>wqa<CR>")
@@ -35,6 +37,13 @@ keymap({ "n", "v" }, keys.n_v_5k, "5k")
 
 keymap({ "n", "v" }, keys.n_v_10j, "10j")
 keymap({ "n", "v" }, keys.n_v_10k, "10k")
+
+keymap("i", "<C-k>", "<Esc>")
+keymap("n", "<C-k><C-k>", "<Esc>:w<CR>")
+
+-- insert mode: ctrl+l ==> <Right>, ctrl+h ==> <Left>
+keymap("i", "<C-l>", "<Right>")
+keymap("i", "<C-h>", "<Left>")
 
 -- very magic search mode
 if cfg.enable_very_magic_search then
@@ -110,12 +119,12 @@ keymap("t", keys.terminal_to_normal, "<C-\\><C-n>")
 
 -- DEPRECATED :Terminal kes
 
--- map("n", "st", ":sp | terminal<CR>", opt)
--- map("n", "stv", ":vsp | terminal<CR>", opt)
--- map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
--- map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
--- map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
--- map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
+keymap("n", "ht", ":sp | terminal<CR>")
+keymap("n", "st", ":vsp | terminal<CR>")
+keymap("t", "<A-h>", [[ <C-\><C-N><C-w>h ]])
+keymap("t", "<A-j>", [[ <C-\><C-N><C-w>j ]])
+keymap("t", "<A-k>", [[ <C-\><C-N><C-w>k ]])
+keymap("t", "<A-l>", [[ <C-\><C-N><C-w>l ]])
 -- map("t", "<leader>h", [[ <C-\><C-N><C-w>h ]], opt)
 -- map("t", "<leader>j", [[ <C-\><C-N><C-w>j ]], opt)
 -- map("t", "<leader>k", [[ <C-\><C-N><C-w>k ]], opt)
