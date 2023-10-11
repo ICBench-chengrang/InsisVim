@@ -117,7 +117,7 @@ keymap("n", keys.fold.close, ":foldclose<CR>")
 
 -- Esc/Ctrl+o back to Normal mode
 keymap("t", keys.terminal_to_normal, "<C-\\><C-n>")
-keymap("t", "<leader>o", "<C-\\><C-n>")
+keymap("t", "<C-o>", "<C-\\><C-n>")
 
 -- DEPRECATED :Terminal kes
 
