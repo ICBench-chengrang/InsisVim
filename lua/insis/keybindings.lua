@@ -38,8 +38,9 @@ keymap({ "n", "v" }, keys.n_v_5k, "5k")
 keymap({ "n", "v" }, keys.n_v_10j, "10j")
 keymap({ "n", "v" }, keys.n_v_10k, "10k")
 
-keymap("i", "<C-k>", "<Esc>")
-keymap("n", "<C-k><C-k>", "<Esc>:w<CR>")
+keymap("n", "<C-o>", "<Nop>")
+keymap("i", "<C-o>", "<Esc>")
+keymap("n", "<C-o><C-o>", ":w<CR>")
 
 -- insert mode: ctrl+l ==> <Right>, ctrl+h ==> <Left>
 keymap("i", "<C-l>", "<Right>")
@@ -114,8 +115,9 @@ end
 keymap("n", keys.fold.open, ":foldopen<CR>")
 keymap("n", keys.fold.close, ":foldclose<CR>")
 
--- Esc back to Normal mode
+-- Esc/Ctrl+o back to Normal mode
 keymap("t", keys.terminal_to_normal, "<C-\\><C-n>")
+keymap("t", "<leader>o", "<C-\\><C-n>")
 
 -- DEPRECATED :Terminal kes
 

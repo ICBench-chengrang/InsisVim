@@ -55,8 +55,8 @@ local UserConfig = {
     n_force_quit = "Q", -- :q!
     n_quit_all = "qa", -- :q!
     -- quick move
-    -- n_v_5j = "<C-j>",
-    -- n_v_5k = "<C-k>",
+    n_v_5j = "<C-j>",
+    n_v_5k = "<C-k>",
     n_v_10k = "<C-u>",
     n_v_10j = "<C-d>",
     fold = {

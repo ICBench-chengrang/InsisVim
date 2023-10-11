@@ -41,9 +41,9 @@ return function(config)
       if not null_ls then
         return {}
       end
-      --if config.formatter == "black" then
-      --  return { null_ls.builtins.black.with({ extra_args = { "--fast" } }) }
-      --end
+      if config.formatter == "black" then
+        return { null_ls.builtins.black.with({ extra_args = { "--fast" } }) }
+      end
       return {}
     end,
 
